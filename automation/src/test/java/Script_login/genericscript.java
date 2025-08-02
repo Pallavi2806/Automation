@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.webdriver.WebDriverBrowser;
 
 public class genericscript
 {
-	WebDriver driver;
+	protected WebDriver driver;
 	@BeforeMethod
 	public void launchapp()
 	{
@@ -19,7 +19,7 @@ public class genericscript
 		 driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		driver.get("https://www.naukri.com/registration/createAccount?othersrcp=22636");
+		driver.get("https://dev-dash.janitri.in/");
 	}
 	@AfterMethod
 	public void closeapp()
